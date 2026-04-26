@@ -4,7 +4,7 @@ A full-stack stock trading application inspired by Zerodha, India's leading disc
 
 ## 🌐 Live Demo
 
-- **Frontend**: [Deployed on Vercel](https://your-app.vercel.app) *(Update with your Vercel URL)*
+- **Frontend**: [Deployed on Vercel](https://your-app.vercel.app) *(zerodha-clone-xi-liart.vercel.app)*
 - **Backend**: [Deployed on Render](https://zerodha-clone-gaig.onrender.com)
 
 ## ✨ Features
