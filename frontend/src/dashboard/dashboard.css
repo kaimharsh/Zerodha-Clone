@@ -1,0 +1,348 @@
+/* ================= ROOT SAFE SCOPE ================= */
+
+.dashboard-root {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #222;
+  background: #f6f8fb;
+}
+
+.dashboard-root * {
+  box-sizing: border-box;
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #f6f8fb;
+}
+
+/* ================= CONTENT AREA ================= */
+
+.content {
+  flex: 1;
+  padding: 40px 60px; /* More breathing room on the right */
+  background: #fff;
+  overflow-y: auto;
+}
+
+
+/* ================= INDICES ================= */
+
+.indices-container {
+  display: flex;
+  gap: 32px;
+}
+
+.index-block {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.index {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.index-points {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ef4444;
+}
+
+/* ================= MENU ================= */
+
+/* 1. Ensure the TopBar spreads the Indices and Menu apart */
+.topbar-container {
+  display: flex;
+  justify-content: space-between; /* Pushes Indices to left, Menu to right */
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Fix for the Nav Links appearing correctly */
+.menus ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+/* Forces the items to stay in one line and pushes profile to the right */
+.menu-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.menus ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* 4. Remove that HR if it's causing a line break */
+.menus hr {
+  display: none; 
+}
+.menu {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.menu:hover {
+  color: #387ed1;
+}
+
+.menu.selected {
+  color: #387ed1;
+  font-weight: 600;
+}
+
+/* ================= PROFILE ================= */
+
+/* The vertical divider look before the profile */
+.profile-section {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #eee;
+  padding-left: 24px;
+  position: relative;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  background: #eef2ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+.username {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ================= DROPDOWN ================= */
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 170px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.profile-dropdown div {
+  padding: 14px 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.profile-dropdown div:hover {
+  background: #f3f6fb;
+}
+
+/* ================= GRID ================= */
+
+.dashboard-row {
+  display: flex;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.dashboard-col {
+  flex: 1;
+}
+
+/* ================= CARDS ================= */
+
+.table {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.imp {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.colored {
+  color: #387ed1;
+}
+
+/* ================= BUTTONS ================= */
+
+.dashboard-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-blue {
+  background: #387ed1;
+  color: white;
+}
+
+.btn-blue:hover {
+  background: #2f6db5;
+}
+
+.btn-green {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-green:hover {
+  background: #16a34a;
+}
+
+/* ================= TABLE ================= */
+
+.order-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-table th {
+  text-align: right;
+  padding: 16px 12px;
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.order-table td {
+  padding: 16px 12px;
+  font-size: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.profit {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.loss {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* ================= IMPROVED WATCHLIST ================= */
+
+.watchlist-container {
+  width: 350px; /* Slightly wider for a premium feel */
+  background: #ffffff;
+  border-right: 1px solid #eee;
+  height: calc(100vh - 64px); /* Account for topbar */
+  position: sticky;
+  top: 64px;
+}
+
+.search-container {
+  padding: 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.search {
+  flex: 1;
+  padding: 18px 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.counts {
+  padding-right: 20px;
+  font-size: 12px;
+  color: #9b9b9b;
+}
+
+.list li {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  position: relative;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.list li:hover {
+  background: #fbfbfb;
+}
+
+/* Stock Name Colors */
+.up { color: #4caf50; font-weight: 500; }
+.down { color: #df514c; font-weight: 500; }
+
+.itemInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9b9b9b;
+}
+
+/* ================= ACTION BUTTONS (HOVER) ================= */
+
+.actions {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  background: #fff; /* Hide stock price on hover */
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  z-index: 10;
+}
+
+.actions button {
+  margin: 0 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 6px 10px;
+}
+
+.actions .buy { background: #4184f3; color: white; }
+.actions .sell { background: #df514c; color: white; }
+.actions .action { background: #eee; color: #666; }
