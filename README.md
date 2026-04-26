@@ -4,7 +4,7 @@ A full-stack stock trading application inspired by Zerodha, India's leading disc
 
 ## 🌐 Live Demo
 
-- **Frontend**: [Deployed on Vercel](https://your-app.vercel.app) *(zerodha-clone-xi-liart.vercel.app)*
+- **Frontend**: [Deployed on Vercel](https://your-app.vercel.app) *zerodha-clone-xi-liart.vercel.app*
 - **Backend**: [Deployed on Render](https://zerodha-clone-gaig.onrender.com)
 
 ## ✨ Features
@@ -195,7 +195,7 @@ This project is created for educational purposes. It is not affiliated with Zero
 
 ## 👤 Author
 
-**Harsh Kaim**
+**Harsh**
 - GitHub: [@kaimharsh](https://github.com/kaimharsh)
 - LinkedIn: [Add your LinkedIn profile]
 
@@ -204,19 +204,6 @@ This project is created for educational purposes. It is not affiliated with Zero
 - Inspired by [Zerodha](https://zerodha.com/) - India's largest stock broker
 - UI/UX design patterns from modern trading platforms
 - Open source community for amazing tools and libraries
-
-## 📸 Screenshots
-
-### Landing Page
-![Landing Page](screenshots/landing-page.png)
-
-### Trading Dashboard
-![Dashboard](screenshots/dashboard.png)
-
-### Watchlist
-![Watchlist](screenshots/watchlist.png)
-
-*Note: Add screenshots to a `screenshots/` folder in your repository*
 
 ## 🔮 Future Enhancements
 
@@ -237,7 +224,7 @@ This is a clone project created for learning and portfolio purposes. It is not i
 
 ---
 
-**Made with ❤️ by Harsh Kaim**
+**Made with ❤️ by Harsh **
 
 *If you found this project helpful, please give it a ⭐ on GitHub!*
 
