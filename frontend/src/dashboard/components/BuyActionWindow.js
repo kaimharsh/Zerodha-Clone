@@ -9,7 +9,6 @@ const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
-  // ⭐ Access the context functions correctly
   const { closeBuyWindow } = useContext(GeneralContext);
 
   const handleBuyClick = async () => {
@@ -20,7 +19,7 @@ const BuyActionWindow = ({ uid }) => {
         price: stockPrice,
         mode: "BUY",
       });
-      closeBuyWindow(); // Close window after successful order
+      closeBuyWindow();
     } catch (err) {
       console.error("Error placing order", err);
     }
@@ -32,7 +31,6 @@ const BuyActionWindow = ({ uid }) => {
 
   return (
     <div className="container" id="buy-window" draggable="true">
-      {/* ⭐ HEADER SECTION: Shows the stock name you clicked */}
       <div className="buy-header" style={{ marginBottom: "20px", borderBottom: "1px solid #eee", paddingBottom: "10px" }}>
         <h3 style={{ margin: 0, color: "#444", fontSize: "16px" }}>
           Buy <span style={{ color: "#387ed1" }}>{uid}</span>
@@ -71,12 +69,12 @@ const BuyActionWindow = ({ uid }) => {
           Margin required <strong style={{ color: "#222" }}>₹{(stockQuantity * stockPrice).toFixed(2)}</strong>
         </span>
         <div>
-          <Link className="btn btn-blue" onClick={handleBuyClick}>
+          <button className="btn btn-blue" onClick={handleBuyClick}>
             Buy
-          </Link>
-          <Link to="" className="btn btn-grey" onClick={handleCancelClick}>
+          </button>
+          <button className="btn btn-grey" onClick={handleCancelClick}>
             Cancel
-          </Link>
+          </button>
         </div>
       </div>
     </div>

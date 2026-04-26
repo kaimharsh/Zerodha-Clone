@@ -28,20 +28,12 @@ const LandingLayout = ({ children }) => {
   return (
     <div className="d-flex flex-column min-vh-100">
       <Navbar />
-
       <main className="flex-grow-1">
         {children}
       </main>
-
       <Footer />
     </div>
   );
-};
-
-
-// ⭐ Dashboard Layout Wrapper
-const DashboardLayout = ({ children }) => {
-  return <>{children}</>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -104,7 +96,7 @@ root.render(
         }
       />
 
-      {/* ⭐ Dashboard (NO Landing Layout) */}
+      {/* Dashboard (NO Landing Layout) */}
       <Route path="/dashboard/*" element={<DashboardHome />} />
 
       {/* Not Found */}

@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import axios from "axios";
 import GeneralContext from "./GeneralContext";
 import { Tooltip, Grow } from "@mui/material";
 import {
@@ -61,7 +60,6 @@ const WatchList = () => {
         })}
       </ul>
 
-      {/* Adding a container for the chart to manage its size better */}
       <div className="chart-wrapper" style={{ padding: "20px" }}>
         <DoughnutChart data={data} />
       </div>
@@ -80,7 +78,6 @@ const WatchListItem = ({ stock }) => {
       <div className="item">
         <p className={stock.isDown ? "down" : "up"}>{stock.name}</p>
         
-        {/* ⭐ Only show the price/info when NOT hovering */}
         {!showWatchlistActions && (
           <div className="itemInfo">
             <span className="percent">{stock.percent}</span>
@@ -94,7 +91,6 @@ const WatchListItem = ({ stock }) => {
         )}
       </div>
 
-      {/* ⭐ Actions overlay when hovering */}
       {showWatchlistActions && <WatchListActions uid={stock.name} />}
     </li>
   );
